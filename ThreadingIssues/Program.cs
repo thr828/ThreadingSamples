@@ -11,8 +11,8 @@ namespace Wrox.ProCSharp.Threading
    {
       static void Main()
       {
-          RaceConditions();
-          // Deadlock();
+            //RaceConditions();
+            Deadlock();
 
       }
 
