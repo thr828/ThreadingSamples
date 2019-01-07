@@ -8,6 +8,9 @@ using System.IO;
 
 namespace TaskSamples
 {
+    /// <summary>
+    /// ResultsFromTasks task结果 t1.Result
+    /// </summary>
     class Program
     {
         static void Main()
@@ -16,8 +19,8 @@ namespace TaskSamples
 
             //SimpleTask();
             //ContinuationTask();
-            ParentAndChild();
-            // ResultsFromTasks();
+            //ParentAndChild();
+            ResultsFromTasks();
 
             Thread.Sleep(5000);
             Console.ReadKey();
@@ -56,7 +59,7 @@ namespace TaskSamples
         {
             var t1 = new Task<Tuple<int,int>>(TaskWithResult, Tuple.Create<int, int>(8, 3));
             t1.Start();
-            Console.WriteLine(t1.Result);
+            //Console.WriteLine(t1.Result);
             t1.Wait();
             Console.WriteLine("result from task: {0} {1}", t1.Result.Item1, t1.Result.Item2);
         }
@@ -67,6 +70,7 @@ namespace TaskSamples
             int result = div.Item1 / div.Item2;
             int reminder = div.Item1 % div.Item2;
             Console.WriteLine("task creates a result...");
+            //Thread.Sleep(5000);
 
             return Tuple.Create<int, int>(result, reminder);
         }
