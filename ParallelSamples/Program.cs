@@ -12,6 +12,7 @@ namespace Wrox.ProCSharp.Threading
         static void Main()
         {
             ParallelFor();
+            Console.ReadKey();
             // ParallelForeach();
             // ParallelInvoke();
         }

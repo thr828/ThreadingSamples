@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace Wrox.ProCSharp.Threading
 {
-
+    /// <summary>
+    /// 取消架构 Parallel.For TASK
+    /// </summary>
     class Program
     {
         static void Main()
