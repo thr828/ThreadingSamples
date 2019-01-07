@@ -14,9 +14,9 @@ namespace TaskSamples
         {
             // ParallelDemo();
 
-            SimpleTask();
-            // ContinuationTask();
-            // ParentAndChild();
+            //SimpleTask();
+            //ContinuationTask();
+            ParentAndChild();
             // ResultsFromTasks();
 
             Thread.Sleep(5000);
@@ -104,7 +104,7 @@ namespace TaskSamples
             t1.Start();
 
 
-            Thread.Sleep(5000);
+           // Thread.Sleep(5000);
 
         }
 
@@ -143,7 +143,7 @@ namespace TaskSamples
         static void ParentTask()
         {
             Console.WriteLine("task id {0}", Task.CurrentId);
-            Task child = new Task(ChildTask); // , TaskCreationOptions.DetachedFromParent);
+            Task child = new Task(ChildTask,TaskCreationOptions.AttachedToParent); // , TaskCreationOptions.DetachedFromParent);
             child.Start();
             Thread.Sleep(1000);
             Console.WriteLine("parent started child");
@@ -153,6 +153,7 @@ namespace TaskSamples
         {
             // Console.WriteLine("task id {0}, parent: {1}", Task.Current.Id, Task.Current.Parent.Id);
             Console.WriteLine("child");
+            Console.WriteLine("child task id {0}", Task.CurrentId);
             Thread.Sleep(5000);
             Console.WriteLine("child finished");
         }
