@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncComponent", "AsyncComp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerSample", "TimerSample\TimerSample.csproj", "{1F645AC0-8007-4C34-9518-CA7D9F90BD2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{8CE97C97-C9D7-43CA-9664-D0F8F75C364A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIDemo", "UIDemo\UIDemo.csproj", "{EF508CE2-CEBA-41C4-97B8-323983DA638A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -97,6 +101,14 @@ Global
 		{1F645AC0-8007-4C34-9518-CA7D9F90BD2F}.Debug|x86.Build.0 = Debug|x86
 		{1F645AC0-8007-4C34-9518-CA7D9F90BD2F}.Release|x86.ActiveCfg = Release|x86
 		{1F645AC0-8007-4C34-9518-CA7D9F90BD2F}.Release|x86.Build.0 = Release|x86
+		{8CE97C97-C9D7-43CA-9664-D0F8F75C364A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CE97C97-C9D7-43CA-9664-D0F8F75C364A}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CE97C97-C9D7-43CA-9664-D0F8F75C364A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CE97C97-C9D7-43CA-9664-D0F8F75C364A}.Release|x86.Build.0 = Release|Any CPU
+		{EF508CE2-CEBA-41C4-97B8-323983DA638A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF508CE2-CEBA-41C4-97B8-323983DA638A}.Debug|x86.Build.0 = Debug|Any CPU
+		{EF508CE2-CEBA-41C4-97B8-323983DA638A}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF508CE2-CEBA-41C4-97B8-323983DA638A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
