@@ -6,7 +6,10 @@ using System.Threading;
 
 namespace Wrox.ProCSharp.Threading
 {
-
+    /// <summary>
+    /// thread 默认是前台线程，threadpool是后台线程，task默认是后台线程，应用程序的主线程都默认为前台线程 
+    /// 后台线程不会阻止进程的终止。属于某个进程的所有前台线程都终止后，该进程就会被终止。所有剩余的后台线程都会停止且不会完成。
+    /// </summary>
     class Program
     {
         private static void ThreadingTimer()
@@ -31,10 +34,12 @@ namespace Wrox.ProCSharp.Threading
             t1.AutoReset = true;
             t1.Elapsed += TimeAction;
             t1.Start();
-            Thread.Sleep(10000);
+            Thread.Sleep(7000);
+            Console.WriteLine("结束");
             t1.Stop();
 
             t1.Dispose();
+            Console.ReadKey();
         }
 
         static void TimeAction(object sender, System.Timers.ElapsedEventArgs e)
@@ -45,8 +50,8 @@ namespace Wrox.ProCSharp.Threading
 
         static void Main(string[] args)
         {
-            // ThreadingTimer();
-            TimersTimer();
+             ThreadingTimer();
+             //  TimersTimer();
         }
     }
 }

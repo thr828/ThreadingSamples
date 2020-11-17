@@ -33,7 +33,7 @@ namespace Wrox.ProCSharp.Threading
     {
         static void Main()
         {
-            //FirstThread();
+            // FirstThread();
 
             //var t1 = new Thread(Prio);
             //t1.Name = "First";
@@ -45,17 +45,17 @@ namespace Wrox.ProCSharp.Threading
 
             //t1.Start();
             //t2.Start();
+            //Console.ReadKey();
+            var t1 = new Thread(ThreadMain);
+            t1.Name = "MyNewThread1";
+            t1.IsBackground = true;
+            t1.Start();
+            Console.WriteLine("Main thread ending now...");
 
-            //var t1 = new Thread(ThreadMain);
-            //t1.Name = "MyNewThread1";
-            //t1.IsBackground = true;
-            //t1.Start();
-            //Console.WriteLine("Main thread ending now...");
+            //var d = new Data { Message = "Info" };
 
-            var d = new Data { Message = "Info" };
-            
-            var t2 = new Thread(ThreadMainWithParameters);
-            t2.Start(d);
+            //var t2 = new Thread(ThreadMainWithParameters);
+            //t2.Start(d);
 
             //var obj = new MyThread("info");
             //var t3 = new Thread(obj.ThreadMain);

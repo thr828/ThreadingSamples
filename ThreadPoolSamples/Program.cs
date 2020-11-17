@@ -13,6 +13,8 @@ namespace Wrox.ProCSharp.Threading
             int nCompletionPortThreads;//最大I/O线程数
             ThreadPool.GetMaxThreads(out nWorkerThreads, out nCompletionPortThreads);
             Console.WriteLine("Max worker threads: {0}, I/O completion threads: {1}", nWorkerThreads, nCompletionPortThreads);
+            ThreadPool.SetMaxThreads(2,2);
+            ThreadPool.SetMinThreads(1, 1);
 
             for (int i = 0; i < 3; i++)
             {
